@@ -3,11 +3,9 @@ kind: Service
 metadata:
   name: nginx-svc
 spec:
-  type: ClusterIP 
   selector:
-    name: nginx-dep        # Label selector to select pods from the Deployment
+    app: nginx
   ports:
-    - protocol: TCP
-      port: 8080      # Port the service will listen on
-      targetPort: 8080  # Port the service will forward traffic to
-  
+  - protocol: TCP
+    port: 80
+    targetPort: 80

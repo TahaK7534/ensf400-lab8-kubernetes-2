@@ -3,15 +3,15 @@ kind: Ingress
 metadata:
   name: nginx-ingress
   annotations:
-    ingress.kubernetes.io/rewrite-target: /    
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
       paths:
-      - path: /nginx
+      - path: /
         pathType: Prefix
         backend:
           service:
             name: nginx-svc
             port:
-              number: 8080
+              number: 80

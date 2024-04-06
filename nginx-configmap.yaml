@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: nginx-configmap
 data:
-  nginx.cfg: |
+  default.conf: |
     upstream backend {
         server app-1:8080;
         server app-2:8080;
